@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, V 🎂</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- INTRO OVERLAY -->
+<div id="intro" class="intro-screen">
+  <div class="intro-orb intro-orb-1"></div>
+  <div class="intro-orb intro-orb-2"></div>
+  <div class="intro-content">
+    <p class="intro-line" id="il1">Hey V...</p>
+    <p class="intro-line" id="il2">Yes, YOU. 👀</p>
+    <p class="intro-line" id="il3">Before you continue...<br>I need you to know that someone spent<br><strong>WAY too much time</strong> making this.<small>(Move your mouse to reveal more)</small></p>
+    <button class="btn-main" id="introBtn" onclick="startJourney()">Okay Kittu, show me →</button>
+  </div>
+</div>
+
+<!-- BIRTHDAY REVEAL -->
+<div id="reveal" class="reveal-screen hidden">
+  <div class="reveal-content">
+    <div class="reveal-big">HAPPY BIRTHDAY, V ❤️</div>
+    <p class="reveal-sub">From your best friend,<br>your partner-in-crime,<br>your favorite headache,<br>and your Kittu 🫶</p>
+    <button class="btn-main" onclick="enterSite()">Enter →</button>
+  </div>
+</div>
+
+<!-- PROGRESS BAR -->
+<div id="progressBar" class="progress-bar hidden"><div id="progressFill"></div></div>
+
+<!-- MAIN SITE -->
+<main id="mainSite" class="hidden">
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="particles" id="particles"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🎂 It's your day</div>
+    <h1 class="hero-title">Happy Birthday, V</h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">To my best friend, my favorite person to annoy,<br>and my partner in basically everything.</p>
+    <a href="#story" class="btn-main scroll-btn">Let's take a little trip down memory lane ↓</a>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="section" id="story">
+  <div class="container">
+    <h2 class="section-title">How did we become... <em>THIS?</em> 😂❤️</h2>
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<!-- BEST FRIEND -->
+<section class="section bg-alt" id="bestfriend">
+  <div class="container">
+    <h2 class="section-title">First of all...<br><em>you're my best friend.</em></h2>
+    <div class="cards-grid" id="bfCards"></div>
+  </div>
+</section>
+
+<!-- MEMORIES -->
+<section class="section" id="memories">
+  <div class="container">
+    <h2 class="section-title">Evidence that we have absolutely<br>no normal memories 📸</h2>
+    <div class="polaroid-grid" id="polaroids"></div>
+  </div>
+</section>
+
+<!-- 10 THINGS -->
+<section class="section bg-alt" id="reasons">
+  <div class="container">
+    <h2 class="section-title">Okay fine...<br><em>you're pretty special.</em></h2>
+    <div class="reasons-grid" id="reasonsGrid"></div>
+  </div>
+</section>
+
+<!-- GIFTS -->
+<section class="section" id="gifts">
+  <div class="container">
+    <h2 class="section-title">I couldn't exactly put your gifts<br>inside a website... so I improvised. 🎁Click it!</h2>
+    <div class="gifts-grid" id="giftsGrid"></div>
+  </div>
+</section>
+
+<!-- MUSIC -->
+<section class="section bg-alt" id="music">
+  <div class="container">
+    <h2 class="section-title">A little soundtrack for us 🎧</h2>
+    <div class="player-wrap" id="playerWrap"></div>
+  </div>
+</section>
+
+<!-- SHAYARI -->
+<section class="section bg-alt" id="shayari">
+  <div class="container">
+    <h2 class="section-title">कुछ अल्फ़ाज़... दिल से 🌸</h2>
+    <div class="shayari-grid" id="shayariGrid"></div>
+  </div>
+</section>
+
+<!-- LETTER -->
+<section class="section letter-section" id="letter">
+  <div class="container">
+    <h2 class="section-title">Okay... jokes aside.</h2>
+    <div class="letter-card" id="letterCard"></div>
+  </div>
+</section>
+
+<!-- WISHES -->
+<section class="section bg-alt" id="wishes">
+  <div class="container">
+    <h2 class="section-title">Things I hope this next year gives you ✨</h2>
+    <div class="wishes-list" id="wishesList"></div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="section final-section" id="final">
+  <div class="container">
+    <p class="final-lead">You've reached the end...</p>
+    <p class="final-lead2">But there's still one thing left.</p>
+    <button class="btn-main" onclick="openFinalGift()">Open the last gift 🎁</button>
+  </div>
+</section>
+
+</main>
+
+<!-- FINAL GIFT OVERLAY -->
+<div id="finalOverlay" class="final-overlay hidden">
+  <canvas id="confettiCanvas"></canvas>
+  <div class="final-message" id="finalMessage"></div>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
